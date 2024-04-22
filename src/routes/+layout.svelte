@@ -10,9 +10,9 @@
 		<slot />
 	</main>
 
-	<footer>
+<!-- 	<footer>
 		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
+	</footer> -->
 </div>
 
 <style>
@@ -44,7 +44,16 @@
 	footer a {
 		font-weight: bold;
 	}
+	.tiptap{
+      border: 1px solid black;
+      background-color: lightgreen;
+      padding: 1rem;
+      min-width: 100px;
+      max-width: 800px;
+      min-height: 100px;
+      max-height: 600px;
 
+    }
 	@media (min-width: 480px) {
 		footer {
 			padding: 12px 0;
