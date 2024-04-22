@@ -4,8 +4,8 @@
 </script>
 
 <div class="app">
-	<Header />
-
+<!-- 	<Header /> -->
+	<h1>Editor de texto rapidito de dan :) </h1>
 	<main>
 		<slot />
 	</main>

@@ -50,8 +50,15 @@ a:hover {
 }
 
 h1 {
-	font-size: 2rem;
+	font-size: 3rem;
 	text-align: center;
+	/* cute title writting */
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	/* cute stylings */
+	text-shadow: 2px 2px 4px #000000;
+	color: #fff47b;
+
+
 }
 
 h2 {
@@ -170,4 +177,18 @@ button:focus:not(:focus-visible) {
 
 
 	}
+  }
+  .tiptap p.is-editor-empty:first-child::before {
+	color: #adb5bd;
+	content: attr(data-placeholder);
+	float: left;
+	height: 0;
+	pointer-events: none;
+  }
+  .tiptap p.is-empty::before {
+	color: #adb5bd;
+	content: attr(data-placeholder);
+	float: left;
+	height: 0;
+	pointer-events: none;
   }

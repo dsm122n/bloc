@@ -2,21 +2,26 @@
     import { onMount, onDestroy } from 'svelte'
     import { Editor } from '@tiptap/core'
     import StarterKit from '@tiptap/starter-kit'
-  
+    import Placeholder from '@tiptap/extension-placeholder'
     let element
     let editor
-  
+
     onMount(() => {
       editor = new Editor({
         element: element,
         extensions: [
           StarterKit,
+          Placeholder.configure({placeholder: 'Escribir por aquí...', emptyEditorClass: 'is-editor-empty'}),
         ],
-        content: '<h1>Título 1</h1> <h2>Título 2 </h2> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, ipsa. Consequuntur molestiae omnis at accusamus, est provident perferendis debitis quod adipisci unde voluptate ipsam ab tenetur minima voluptas eveniet vel?</p>',
+
+        content: '',
+        // placeholder
+
         onTransaction: () => {
           // force re-render so `editor.isActive` works as expected
           editor = editor
         },
+
       })
       
     })
